@@ -61,14 +61,9 @@ const nextConfig = {
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   output: process.env.NEXT_OUTPUT_MODE || undefined,
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  experimental: {
-    dynamicIO: true,
-  },
+  cacheComponents: true,
   images: {
     remotePatterns: imageRemotePatterns,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   async headers() {
     return [

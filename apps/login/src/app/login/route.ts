@@ -29,10 +29,6 @@ import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { DEFAULT_CSP } from "../../../constants/csp";
 
-export const dynamic = "force-dynamic";
-export const revalidate = false;
-export const fetchCache = "default-no-store";
-
 const gotoAccounts = ({
   request,
   requestId,

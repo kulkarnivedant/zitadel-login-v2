@@ -20,5 +20,5 @@
     ".next/types/**/*.ts",
     "custom-config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
 }
