@@ -59,9 +59,7 @@ const nextConfig = {
   basePath: process.env.NEXT_PUBLIC_BASE_PATH,
   output: process.env.NEXT_OUTPUT_MODE || undefined,
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  experimental: {
-    dynamicIO: true,
-  },
+  cacheComponents: true,
   images: {
     remotePatterns: imageRemotePatterns,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -70,9 +68,6 @@ const nextConfig = {
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   async headers() {
     return [
